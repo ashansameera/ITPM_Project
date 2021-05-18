@@ -5,11 +5,13 @@
  */
 package IT19035536;
 
-import com.mysql.jdbc.Connection;
+import IT18229530.Time_table_Location;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import mycode.DBconnects;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -23,7 +25,7 @@ public class Time_table_Lecture extends javax.swing.JFrame {
     ResultSet rs = null;
     
     public Time_table_Lecture() {
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         initComponents();
         clear();
         

@@ -5,12 +5,14 @@
  */
 package IT19035536;
 
-import com.mysql.jdbc.Connection;
+
 import java.sql.PreparedStatement;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import mycode.DBconnect;
+import mycode.DBconnects;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -25,8 +27,7 @@ public class Manege_subject extends javax.swing.JFrame {
    
     public Manege_subject() {
         initComponents();
-        
-        con = DBconnect.connect();
+       con = DBconnects.connects();
         tableload();
          clear(); 
          

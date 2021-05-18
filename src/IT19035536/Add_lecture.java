@@ -6,9 +6,11 @@
 package IT19035536;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import mycode.DBconnects;
 
 /**
  *
@@ -18,14 +20,14 @@ public class Add_lecture extends javax.swing.JFrame {
     
     Connection con = null;
     PreparedStatement pst = null;
+    
 
     /**
      * Creates new form Add_lecture
      */
     public Add_lecture() {
         initComponents();
-        con = DBconnect.connect();
-         clear(); 
+        con = DBconnects.connects();
         
         // this.setExtendedState(MAXIMIZED_BOTH);
     }

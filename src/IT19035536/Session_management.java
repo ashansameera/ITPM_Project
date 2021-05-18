@@ -5,7 +5,7 @@
  */
 package IT19035536;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JFrame;
@@ -17,6 +17,7 @@ import IT19031408.Consecutive;
 import IT19031408.Parallel;
 import IT19031408.Non_Overlapping;
 import IT18229530.ManageNotAvailable;
+import mycode.DBconnects;
 /**
  *
  * @author aweer
@@ -30,7 +31,7 @@ public class Session_management extends javax.swing.JFrame {
     
     public Session_management() {
         initComponents();
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         tableload();
          
     }

@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package IT19035536;
+package IT18229530;
 
-import com.mysql.jdbc.Connection;
+import IT19035536.Main_Page;
+import IT19035536.Time_table_Group;
+import IT19035536.Time_table_Lecture;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import mycode.DBconnect;
 import javax.swing.JOptionPane;
+import mycode.DBconnects;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -17,12 +20,12 @@ import net.proteanit.sql.DbUtils;
  * @author aweer
  */
 public class Time_table_Location extends javax.swing.JFrame {
-Connection con = null;
+    Connection con = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
     
     public Time_table_Location() {
-         con = DBconnect.connect();
+         con = (Connection) DBconnects.connects();
         initComponents();
         clear();
     }

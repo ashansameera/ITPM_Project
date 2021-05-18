@@ -8,8 +8,11 @@ package IT19035536;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import mycode.DBconnects;
+
 
 /**
  *
@@ -17,7 +20,7 @@ import mycode.DBconnect;
  */
 public class Add_new_sesison extends javax.swing.JFrame {
 
-    Connection con = null;
+   Connection con = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
 
@@ -25,7 +28,7 @@ public class Add_new_sesison extends javax.swing.JFrame {
          
     public Add_new_sesison() {
         initComponents();
-        con = DBconnect.connect();
+         con = DBconnects.connects();
         clear();
     }
 
@@ -33,7 +36,7 @@ public class Add_new_sesison extends javax.swing.JFrame {
     
         try{
         String sql = "select * from lecture";
-        pst = con.prepareStatement(sql);
+         pst = con.prepareStatement(sql);
         rs = pst.executeQuery();
         
         while (rs.next()){
@@ -84,7 +87,7 @@ public class Add_new_sesison extends javax.swing.JFrame {
     
         try{
         String sql = "select * from addstudentgroup";
-        pst = con.prepareStatement(sql);
+       pst = con.prepareStatement(sql);
         rs = pst.executeQuery();
         
         while (rs.next()){
@@ -101,7 +104,7 @@ public class Add_new_sesison extends javax.swing.JFrame {
     
         try{
         String sql = "select * from subject";
-        pst = con.prepareStatement(sql);
+       pst = con.prepareStatement(sql);
         rs = pst.executeQuery();
         
         while (rs.next()){
@@ -118,7 +121,7 @@ public class Add_new_sesison extends javax.swing.JFrame {
     
         try{
         String sql = "select * from lecture";
-        pst = con.prepareStatement(sql);
+         pst = con.prepareStatement(sql);
         rs = pst.executeQuery();
         
         while (rs.next()){
@@ -530,8 +533,8 @@ public class Add_new_sesison extends javax.swing.JFrame {
          try{
             String q = "INSERT INTO session (Lecture,Lecture2,Tag,subcode,Groups,Subject,Student,Duration,Day,Start_time,End_time,Rooms)"
                 + "values ('"+ lecture +"','"+lecture2+"','"+ tag +"','"+ subc +"','"+ group +"','"+ subject +"','"+ studnet +"','"+ duration +"','"+day+"','"+start_t+"','"+end_t+"','"+room+"')";
-        pst = (PreparedStatement) con.prepareStatement(q);
-        pst.execute();
+       pst = (PreparedStatement) con.prepareStatement(q);
+       pst.execute();
         JOptionPane.showMessageDialog(this, "Successfully added!");
         
         }
@@ -606,7 +609,7 @@ public class Add_new_sesison extends javax.swing.JFrame {
         
         try{
         
-        pst = con.prepareStatement(sql);
+       pst = (PreparedStatement) con.prepareStatement(sql);
         pst.setString(1, temp);
         rs = pst.executeQuery();
         if(rs.next()){

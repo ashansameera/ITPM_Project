@@ -17,6 +17,7 @@ import net.proteanit.sql.DbUtils;
 import IT19031408.Parallel;
 import IT19035536.Main_Page;
 import IT19035536.Session_management;
+import mycode.DBconnects;
 /**
  *
  * @author ACER
@@ -29,7 +30,7 @@ public class ManageNotAvailable extends javax.swing.JFrame {
     public ManageNotAvailable() {
         initComponents();
            
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         
         
     }

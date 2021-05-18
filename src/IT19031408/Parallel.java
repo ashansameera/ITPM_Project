@@ -14,6 +14,7 @@ import net.proteanit.sql.DbUtils;
 import IT19035536.Session_management;
 import IT18229530.ManageNotAvailable;
 import IT19035536.Main_Page;
+import mycode.DBconnects;
 
 /**
  *
@@ -26,7 +27,7 @@ public class Parallel extends javax.swing.JFrame {
     ResultSet rs = null;
     public Parallel() {
         initComponents();
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         tableload();
     }
     public void tableload(){

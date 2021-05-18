@@ -7,8 +7,11 @@ package IT19035536;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import static mycode.DBconnect.connect;
+import mycode.DBconnects;
 
 
 //import com.dbconnection.DBconnect;
@@ -28,14 +31,10 @@ public class Add_Subject extends javax.swing.JFrame {
     
     Connection con = null;
     PreparedStatement pst = null;
-
-    /**
-     * Creates new form Add_Subject
-     */
     public Add_Subject() {
         initComponents();
         
-        con = DBconnect.connect();
+        con = DBconnects.connects();
          clear(); 
         
       // this.setExtendedState(MAXIMIZED_BOTH);
@@ -364,7 +363,7 @@ public class Add_Subject extends javax.swing.JFrame {
         try{
             String q = "INSERT INTO subject (Offered_Year,Offered_Semester,Subject_Name,Subject_Code,No_Of_lecuter_Hour,No_Of_Tutorial_Hour,No_Of_Lab_Hour,No_Of_Evaluation_Hour)"
                 + "values ('"+ year +"','"+ semester +"','"+ sname +"','"+ scode +"','"+ leh +"','"+ th +"','"+ lh +"','"+ eh+"')";
-        pst = (PreparedStatement) con.prepareStatement(q);
+         pst = (PreparedStatement) con.prepareStatement(q);
         pst.execute();
         JOptionPane.showMessageDialog(this, "Successfully added!");
         

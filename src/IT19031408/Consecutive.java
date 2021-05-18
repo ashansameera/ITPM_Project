@@ -20,6 +20,7 @@ import net.proteanit.sql.DbUtils;
 import static sun.misc.MessageUtils.where;
 import IT19035536.Main_Page;
 import IT18229530.ManageNotAvailable;
+import mycode.DBconnects;
 
 /**
  *
@@ -35,7 +36,7 @@ public class Consecutive extends javax.swing.JFrame {
     public Consecutive() {
      
         initComponents();
-         con = DBconnect.connect();
+         con = DBconnects.connects();
         tableload();
     }
 public void tableload(){

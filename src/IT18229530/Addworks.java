@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import mycode.DBconnect;
 import IT19035536.Main_Page;
 import IT19035536.Manege_subject;
+import mycode.DBconnects;
 
 /**
  *
@@ -23,7 +24,7 @@ public class Addworks extends javax.swing.JFrame {
     
     public Addworks() {
         initComponents();
-        con = DBconnect.connect();
+        con = DBconnects.connects();
     }
 
     /**

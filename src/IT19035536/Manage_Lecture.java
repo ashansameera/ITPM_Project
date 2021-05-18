@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import mycode.DBconnect;
 import net.proteanit.sql.DbUtils;
 import javax.swing.*;
+import mycode.DBconnects;
 /**
  *
  * @author aweer
@@ -25,7 +26,7 @@ public class Manage_Lecture extends javax.swing.JFrame {
     public Manage_Lecture() {
         initComponents();
         
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         tableload();
          clear(); 
     }

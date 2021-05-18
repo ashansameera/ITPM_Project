@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import mycode.DBconnects;
 
 /**
  *
@@ -28,7 +29,7 @@ public class REGISTRATION extends javax.swing.JFrame {
     public REGISTRATION() {
         initComponents();
         //connect to db
-        con = DBconnect.connect();
+        con = DBconnects.connects();
     }
 
     /**

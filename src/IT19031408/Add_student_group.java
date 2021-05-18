@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import mycode.DBconnects;
 
 /**
  *
@@ -28,7 +29,7 @@ public class Add_student_group extends javax.swing.JFrame {
         initComponents();
         
         //connect to DB
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         clear();
     }
 

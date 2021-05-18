@@ -5,11 +5,13 @@
  */
 package IT19035536;
 
-import com.mysql.jdbc.Connection;
+import IT18229530.Time_table_Location;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import mycode.DBconnect;
 import javax.swing.JOptionPane;
+import mycode.DBconnects;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -17,12 +19,12 @@ import net.proteanit.sql.DbUtils;
  * @author aweer
  */
 public class Time_table_Group extends javax.swing.JFrame {
- Connection con = null;
+    Connection con = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
     
     public Time_table_Group() {
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         initComponents();
         clear();
     }

@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
+import mycode.DBconnects;
 
 /**
  *
@@ -27,7 +28,7 @@ public class Add_Tag extends javax.swing.JFrame {
         initComponents();
         
         //connect to DB
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         clear();
      
      }
@@ -191,7 +192,7 @@ public class Add_Tag extends javax.swing.JFrame {
         
         try {
         
-        String q = "INSERT INTO addtag (TagName,TagCode,RelatedTag) values ('"+TagName+"', '"+TagCode+"', '"+RelatedTag+"')";
+        String q = "INSERT INTO tag (TagName,TagCode,RelatedTag) values ('"+TagName+"', '"+TagCode+"', '"+RelatedTag+"')";
          pst = (PreparedStatement) con.prepareStatement(q);
         pst.execute();
         JOptionPane.showMessageDialog(this, "Successfully added!");

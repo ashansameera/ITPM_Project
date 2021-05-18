@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import mycode.DBconnect;
 import net.proteanit.sql.DbUtils;
 import IT19035536.Main_Page;
+import mycode.DBconnects;
 
 /**
  *
@@ -30,7 +31,7 @@ public class Manage_student_group extends javax.swing.JFrame {
         initComponents();
         
         //connect to DB
-        con = DBconnect.connect();
+        con = DBconnects.connects();
         tableload();
          clear();
     }
