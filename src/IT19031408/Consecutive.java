@@ -41,7 +41,7 @@ public class Consecutive extends javax.swing.JFrame {
     }
 public void tableload(){
         try{
-        String sql = "select Distinct s1.ID,s1.Lecture,s1.Lecture2,s1.Subject,s1.subcode,s1.Groups,Concat(s1.Tag,'-',s2.Tag)as TAG FROM session AS s1 JOIN session AS s2 on s2.Lecture=s1.Lecture and s2.Lecture2=s1.Lecture2 and s2.Subject=s1.Subject and s2.subcode=s1.subcode and s2.Groups=s1.Groups where s1.Tag='lecture' and s2.Tag='tutorial'";
+        String sql = "select Distinct s1.ID,s1.Lecture,s1.Lecture2,s1.Subject,s1.subcode,s1.Groups,s1.Tag||'-'||s2.Tag as TAG FROM session AS s1 JOIN session AS s2 on s2.Lecture=s1.Lecture and s2.Lecture2=s1.Lecture2 and s2.Subject=s1.Subject and s2.subcode=s1.subcode and s2.Groups=s1.Groups where s1.Tag='lecture' and s2.Tag='tutorial'";
 
          pst = (PreparedStatement) con.prepareStatement(sql);
          rs = pst.executeQuery();

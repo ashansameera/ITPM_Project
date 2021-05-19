@@ -69,12 +69,12 @@ public class Add_new_sesison extends javax.swing.JFrame {
     private void fillcombox2(){
     
         try{
-        String sql = "select * from lecture";
+        String sql = "select * from tag";
         pst = con.prepareStatement(sql);
         rs = pst.executeQuery();
         
         while (rs.next()){
-        String tags= rs.getString("Lecture_Name");
+        String tags= rs.getString("TagName");
         c2.addItem(tags);
         }
         }catch(Exception e){

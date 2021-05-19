@@ -10,19 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import mycode.DBconnect;
-import static mycode.DBconnect.connect;
 import mycode.DBconnects;
 
-
-//import com.dbconnection.DBconnect;
-//import mysql.jdbc.PreparedStatement;
-//import java.awt.Color;
-//import java.awt.event.KeyEvent;
-//import java.sql.Connection;
-//import java.sql.SQLException;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
-//import javax.swing.JOptionPane;
 /**
  *
  * @author aweer

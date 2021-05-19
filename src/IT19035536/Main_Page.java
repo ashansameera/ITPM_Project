@@ -103,7 +103,7 @@ public class Main_Page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Manege_subject manages = new Manege_subject();
+        Time_table_Lecture manages = new Time_table_Lecture();
         manages.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
