@@ -36,7 +36,7 @@ public class ManageNotAvailable extends javax.swing.JFrame {
     }
 public void tableload(){
         try{
-        String sql = "SELECT ID,Lecturer,sub_grp,groups,sessionID,Time FROM lecgrpsub";
+        String sql = "SELECT ID,sub_code,groups,sessionID,Lecturer,Time FROM lecgrpsub";
          pst = (PreparedStatement) con.prepareStatement(sql);
          rs = pst.executeQuery();
          
@@ -148,18 +148,18 @@ public void tableload(){
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Session ID", "Sub group", "Group", "Lecturer", "Time"
+                "ID", "Sub_code", "Group", "SeesionID", "Lecture", "Time"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -300,9 +300,9 @@ public void tableload(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // LecGroupSubgroup r1 = new LecGroupSubgroup();
-         //r1.setVisible(true);
-        // this.dispose();       
+        lecGrpSub m1 = new lecGrpSub();
+        m1.setVisible(true);
+        this.dispose();       
        
     }//GEN-LAST:event_jButton12ActionPerformed
 
@@ -348,7 +348,7 @@ public void tableload(){
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Consecutive m1 = new Consecutive();
+        Session_management m1 = new Session_management();
         m1.setVisible(true);
         this.dispose();    
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -376,9 +376,7 @@ public void tableload(){
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-         Consecutive m1 = new Consecutive();
-        m1.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**

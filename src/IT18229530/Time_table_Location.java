@@ -36,12 +36,12 @@ public class Time_table_Location extends javax.swing.JFrame {
        private void fillcombox3(){
     
         try{
-        String sql = "select * from addstudentgroup";
+        String sql = "select * from session";
         pst = con.prepareStatement(sql);
         rs = pst.executeQuery();
         
         while (rs.next()){
-        String lecture = rs.getString("GroupID");
+        String lecture = rs.getString("Rooms");
         j3.addItem(lecture);
         }
         }catch(Exception e){
@@ -249,7 +249,7 @@ public class Time_table_Location extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         String location = (String) j3.getSelectedItem();
-        String sql = "SELECT CONCAT(Start_Time ,'-' , End_Time)As TIME,Lecture,Subject,Groups,Tag,Rooms,Day FROM session where Rooms = '"+location+"'";
+        String sql = "SELECT Start_Time ||'-' || End_Time As TIME,Lecture,Subject,Groups,Tag,Rooms,Day FROM session where Rooms = '"+location+"'";
         try{
             pst = (PreparedStatement) con.prepareStatement(sql);
             rs = pst.executeQuery();

@@ -259,7 +259,7 @@ public class Time_table_Lecture extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
        String lecture = (String) j3.getSelectedItem();
-       String sql = "SELECT CONCAT(Start_Time ,'-' , End_Time)As TIME,Lecture,Subject,Groups,Tag,Rooms,Day FROM session where Lecture = '"+lecture+"'";
+       String sql = "SELECT Start_Time ||'-' || End_Time)As TIME,Lecture,Subject,Groups,Tag,Rooms,Day FROM session where Lecture = '"+lecture+"'";
        try{
            pst = (PreparedStatement) con.prepareStatement(sql);
           rs = pst.executeQuery();

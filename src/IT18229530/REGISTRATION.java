@@ -5,6 +5,7 @@
  */
 package IT18229530;
 
+import IT19035536.Main_Page;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -156,6 +157,10 @@ public class REGISTRATION extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      LogIN m1 = new LogIN();
+      m1.setVisible(true);
+      this.dispose();
+        
         String Username = namebox.getText();
         String Email = mailbox.getText();
         String Password = passbox.getText();

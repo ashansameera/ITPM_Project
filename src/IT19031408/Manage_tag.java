@@ -258,7 +258,7 @@ public class Manage_tag extends javax.swing.JFrame {
             String tagcode = codebox.getText();
             String relatedtag =  tagbox.getSelectedItem().toString();
             
-            String sql = "Update addtag SET TagName = '"+tagname+"', RelatedTag = '"+relatedtag+"' where TagCode = '"+tagcode+"'";
+            String sql = "Update tag SET TagName = '"+tagname+"', RelatedTag = '"+relatedtag+"' where TagCode = '"+tagcode+"'";
             try {
             
             pst = (PreparedStatement) con.prepareStatement(sql);

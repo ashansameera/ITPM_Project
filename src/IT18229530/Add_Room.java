@@ -5,6 +5,7 @@
  */
 package IT18229530;
 
+import IT19035536.Main_Page;
 import IT19035536.Manege_subject;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -279,7 +280,9 @@ public class Add_Room extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        Main_Page manages = new Main_Page();
+        manages.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

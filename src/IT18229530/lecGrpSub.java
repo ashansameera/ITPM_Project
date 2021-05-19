@@ -208,6 +208,8 @@ public class lecGrpSub extends javax.swing.JFrame {
             }
         });
 
+        j5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
+        j5.setAutoscrolls(true);
         j5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 j5ActionPerformed(evt);
@@ -297,17 +299,17 @@ public class lecGrpSub extends javax.swing.JFrame {
                             .addComponent(j3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(j4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(l3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(l5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(2, 2, 2)
                 .addComponent(j5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         pack();
@@ -322,8 +324,8 @@ public class lecGrpSub extends javax.swing.JFrame {
         
   
          try{
-            String q = "INSERT INTO lecgrpsub (sessionID,sub_code,groups,Lecturer,Time)"
-                + "values ('"+sessionID +"','"+subcodes+"','"+ group +"','"+ lecture+"','"+time+"')";
+            String q = "INSERT INTO lecgrpsub (sub_code,groups,Lecturer,Time,sessionID)"
+                + "values ('"+subcodes+"','"+ group +"','"+ lecture+"','"+time+"','"+sessionID +"')";
         pst = (PreparedStatement) con.prepareStatement(q);
         pst.execute();
         JOptionPane.showMessageDialog(this, "Successfully added!");
@@ -383,7 +385,7 @@ public class lecGrpSub extends javax.swing.JFrame {
     }//GEN-LAST:event_j1PopupMenuWillBecomeInvisible
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Session_management manages = new Session_management();
+        ManageNotAvailable manages = new ManageNotAvailable();
         manages.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

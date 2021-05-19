@@ -5,6 +5,14 @@
  */
 package IT18229530;
 
+import IT19031408.Add_Tag;
+import IT19031408.Add_student_group;
+import IT19035536.Add_Subject;
+import IT19035536.Add_lecture;
+import IT19035536.Add_new_sesison;
+import IT19035536.Main_Page;
+import IT19035536.Session_management;
+
 /**
  *
  * @author ACER
@@ -29,11 +37,18 @@ public class SessionManage extends javax.swing.JFrame {
 
         addbox = new javax.swing.JButton();
         roombox = new javax.swing.JButton();
+        roombox1 = new javax.swing.JButton();
+        addbox1 = new javax.swing.JButton();
+        roombox2 = new javax.swing.JButton();
+        roombox3 = new javax.swing.JButton();
+        addbox2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         addbox.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
-        addbox.setText("Add Session");
+        addbox.setText("Add Work Day");
         addbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addboxActionPerformed(evt);
@@ -41,10 +56,61 @@ public class SessionManage extends javax.swing.JFrame {
         });
 
         roombox.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
-        roombox.setText("Session  Rooms");
+        roombox.setText("Add  Rooms");
         roombox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 roomboxActionPerformed(evt);
+            }
+        });
+
+        roombox1.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
+        roombox1.setText("Add  Tag");
+        roombox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roombox1ActionPerformed(evt);
+            }
+        });
+
+        addbox1.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
+        addbox1.setText("Add Session");
+        addbox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addbox1ActionPerformed(evt);
+            }
+        });
+
+        roombox2.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
+        roombox2.setText("Add  Subject");
+        roombox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roombox2ActionPerformed(evt);
+            }
+        });
+
+        roombox3.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
+        roombox3.setText("Add  Lecture");
+        roombox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roombox3ActionPerformed(evt);
+            }
+        });
+
+        addbox2.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
+        addbox2.setText("Add Group");
+        addbox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addbox2ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Add session support details");
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setText("Home");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -53,36 +119,105 @@ public class SessionManage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
-                .addComponent(addbox, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
-                .addComponent(roombox)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(addbox, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(roombox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(roombox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(addbox2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(roombox2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(roombox3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(174, 174, 174)
+                                .addComponent(addbox1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(136, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(166, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addbox, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(roombox, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(166, Short.MAX_VALUE))
+                    .addComponent(roombox, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(roombox1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addbox2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(roombox3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(roombox2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(addbox1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void roomboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomboxActionPerformed
-       // SessionRooms r1 = new SessionRooms();
-        //r1.setVisible(true);
-        //this.dispose();
+        Add_Room r1 = new Add_Room();
+        r1.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_roomboxActionPerformed
 
     private void addboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addboxActionPerformed
-       // AddSession s1 = new AddSession();
-       // s1.setVisible(true);
-       // this.dispose();
+        Addworks s1 = new Addworks();
+        s1.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_addboxActionPerformed
+
+    private void roombox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roombox1ActionPerformed
+        // TODO add your handling code here:
+         Add_Tag m1 = new Add_Tag();
+      m1.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_roombox1ActionPerformed
+
+    private void addbox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbox1ActionPerformed
+      Add_new_sesison m1 = new Add_new_sesison();
+      m1.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_addbox1ActionPerformed
+
+    private void roombox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roombox2ActionPerformed
+      Add_Subject m1 = new Add_Subject();
+      m1.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_roombox2ActionPerformed
+
+    private void roombox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roombox3ActionPerformed
+         Add_lecture m1 = new  Add_lecture();
+      m1.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_roombox3ActionPerformed
+
+    private void addbox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbox2ActionPerformed
+      Add_student_group m1 = new Add_student_group();
+      m1.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_addbox2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      Main_Page m1 = new Main_Page();
+      m1.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,7 +256,14 @@ public class SessionManage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addbox;
+    private javax.swing.JButton addbox1;
+    private javax.swing.JButton addbox2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton roombox;
+    private javax.swing.JButton roombox1;
+    private javax.swing.JButton roombox2;
+    private javax.swing.JButton roombox3;
     // End of variables declaration//GEN-END:variables
 
     private static class addbox {

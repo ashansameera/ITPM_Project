@@ -232,7 +232,7 @@ public class Time_table_Group extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         String group = (String) j3.getSelectedItem();
-        String sql = "SELECT CONCAT(Start_Time ,'-' , End_Time)As TIME,Lecture,Subject,Groups,Tag,Rooms,Day FROM session where Groups = '"+group+"'";
+        String sql = "SELECT Start_Time ||'-'|| End_Time As TIME,Lecture,Subject,Groups,Tag,Rooms,Day FROM session where Groups = '"+group+"'";
         try{
             pst = (PreparedStatement) con.prepareStatement(sql);
             rs = pst.executeQuery();
