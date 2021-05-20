@@ -222,7 +222,7 @@ public class Add_Room extends javax.swing.JFrame {
     }//GEN-LAST:event_bnameActionPerformed
 
     private void rnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rnameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_rnameActionPerformed
 
     private void rtypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rtypeActionPerformed
