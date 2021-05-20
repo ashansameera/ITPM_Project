@@ -22,9 +22,7 @@ public class Add_student_group extends javax.swing.JFrame {
     PreparedStatement pst = null;
     
 
-    /**
-     * Creates new form Add_student_group
-     */
+    
     public Add_student_group() {
         initComponents();
         

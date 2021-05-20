@@ -21,9 +21,7 @@ public class Add_Tag extends javax.swing.JFrame {
     Connection con = null;
     PreparedStatement pst = null;
 
-    /**
-     * Creates new form Add_Tag
-     */
+    
     public Add_Tag() {
         initComponents();
         
