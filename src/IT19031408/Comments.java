@@ -158,7 +158,7 @@ public class Comments extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void j2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_j2ActionPerformed
 
     private void j666ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j666ActionPerformed
